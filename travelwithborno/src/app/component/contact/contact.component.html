@@ -1,0 +1,59 @@
+<!-- contact.component.html -->
+<section id="contact">
+    <div class="section-title">
+        <h3 class="text-center"><b>Contact Us</b></h3>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form (ngSubmit)="submitForm()" class="was-validated">
+                <div class="form-group mb-1">
+                    <label for="fullname">Name:</label>
+                    <input type="text" class="form-control" name="fullname" [(ngModel)]="fullName" required>
+                    <div class="invalid-feedback">Enter full name before submitting the form</div>
+                </div>
+                <div class="form-group mb-1">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="email" required>
+                </div>
+                <div class="form-group mb-1">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" style="resize: none;" name="message" [(ngModel)]="message"
+                        cols="30" rows="4"></textarea>
+                </div>
+                <div class="form-group text-center text-light mt-3">
+                    <button mat-raised-button color="warn" type="reset">Reset</button>
+                    <button mat-raised-button color="primary" type="submit" style="margin-left: 10px;">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-md-4">
+            <div>
+                <h3>Address</h3>
+                <address>Dhanmondi Sankor,Dhanmondi 27</address>
+                <div>
+                    <ul id="link">
+                        <li><i class="fa-sharp fa-solid fa-house"></i> Office: Nizam Sankor Plaza,Dhanmondi
+                            27</li>
+                        <li><a href="tel:01911678100"><i class="fa-solid fa-phone-volume"></i> Mobile:
+                                01911-678100</a></li>
+                        <li><a href="mailto:limonislamborno@gmail.com"><i class="fa-solid fa-envelope"></i>
+                               </a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i> Youtube:
+                                youtube.com/sondhi_travel</a></li>
+                        <li><a href="#demo" data-bs-toggle="collapse"> <i
+                                    class="fa-solid fa-location-dot"></i><b>CLick here for direction on
+                                    map...</b></a></li>
+                        <div id="demo" class="collapse">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.909212683386!2d90.36548317434259!3d23.750616688769895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf4e2bfcfc6b%3A0x137de5767e41336a!2sCentre%20for%20Computer%20Studies%20Ltd.!5e0!3m2!1sen!2sbd!4v1685470299704!5m2!1sen!2sbd"
+                                width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

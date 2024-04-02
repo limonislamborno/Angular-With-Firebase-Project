@@ -1,0 +1,86 @@
+<div class="">
+
+    <div class="row">
+        <div class="col-md-3 mt-5">
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating mb-3 tetx-center">
+                    <h1 class="text-center text-warning">Add Package</h1>
+                </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="id" name="id" [(ngModel)]="id">
+                        <label for="firstname">Id</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="travel_code" name="travel_code" [(ngModel)]="travel_code">
+                        <label for="firstname">Travel Code</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="tourist_spot" name="tourist_spot" [(ngModel)]="tourist_spot">
+                        <label for="lastName">Tourist Spot</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="package_rate" name="package_rate" [(ngModel)]="package_rate">
+                        <label for="email">Package Rate</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="total_seat" name="total_seat" [(ngModel)]="total_seat">
+                        <label for="email">Total Seat</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="date" name="date" [(ngModel)]="date">
+                        <label for="email">Date</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="admin" name="admin" [(ngModel)]="admin">
+                        <label for="mobile">Admin</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="moderator1" name="moderator1" [(ngModel)]="moderator1">
+                        <label for="mobile">Moderator :1</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="moderator2" name="moderator2" [(ngModel)]="moderator2">
+                        <label for="mobile">Moderator :2</label>
+                    </div>
+                    <button mat-raised-button color="primary" (click)="addForm()">Add Event</button>
+            </div>
+        </div>
+        <div class="col-md-9 mt-2">
+            <h1 class="text-danger"> Tour Package List</h1>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Travel Code</th>
+                            <th scope="col">Tourist Spot</th>
+                            <th scope="col">Package Rate</th>
+                            <th scope="col">Total Seat</th>
+                            <th scope="col">Event Date</th>
+                            <th scope="col">Admin</th>
+                            <th scope="col">Moderator :1</th>
+                            <th scope="col">Moderator :2</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let form of formList">
+                            <td >{{form.travel_code}}</td>
+                            <td>{{form.tourist_spot}}</td>
+                            <td>{{form.package_rate}}</td>
+                            <td>{{form.total_seat}}</td>
+                            <td>{{form.date}}</td>
+                            <td>{{form.admin}}</td>
+                            <td>{{form.moderator1}}</td>
+                            <td>{{form.moderator2}}</td>
+                            <td>
+                                <button mat-raised-button color="warn" (click)="deleteForm(form)">Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

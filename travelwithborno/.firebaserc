@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "travelwithborno": {
+      "hosting": {
+        "travelwithborno": [
+          "travelwithborno"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "travelwithborno"
+  }
+}

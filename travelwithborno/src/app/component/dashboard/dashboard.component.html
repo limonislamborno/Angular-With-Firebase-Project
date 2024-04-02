@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+  <span class="example-spacer">Dashboard</span>
+</mat-toolbar>
+
+<div class="mt-4">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 py-4 left">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <button class="btn btn-block btn-primary text-left" (click)="showBlogForm()">
+              <i class="fa fa-file-text-o mr-2"></i> Tour Management
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button class="btn btn-block btn-primary text-left" (click)="showNewsForm()">
+              <i class="fa fa-newspaper-o mr-2"></i> Employee Management
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button class="btn btn-block btn-primary text-left" (click)="showProductForm()">
+              <i class="fa fa-shopping-cart mr-2"></i> Booking List
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button class="btn btn-block btn-primary text-left" (click)="showModifyForm()">
+              <i class="fa fa-newspaper-o mr-2"></i> Notifications
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right side for form -->
+      <div class="col-md-9 py-4">
+        <div *ngIf="showBlog" class="container">
+          <!-- <app-jetblogs></app-jetblogs> -->
+          <app-add-package></app-add-package>
+        </div>
+        <div *ngIf="showNews" class="container">
+          <!-- <app-news></app-news> -->
+          <app-employee-management></app-employee-management>
+        </div>
+        <div *ngIf="showProduct" class="container">
+          <app-booking-list></app-booking-list>
+        </div>
+        <div *ngIf="showModify" class="container">
+          <app-booking-list></app-booking-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

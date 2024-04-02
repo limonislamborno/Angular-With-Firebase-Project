@@ -1,0 +1,20 @@
+/* start navbar css */
+.navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.nav-link{
+    color: white;
+    margin: 10px;
+    transition: .4s;
+}
+.nav-link:hover{
+    background: orangered;
+    transform: scale(1.1);
+    color: white;
+  
+}
+.navbar-icon{
+    color: white;
+}
+/* end navbar css */

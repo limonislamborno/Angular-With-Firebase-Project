@@ -1,0 +1,15 @@
+<div class="col-md-10 mx-auto mt-5 mb-5" (click)="navigateToForm()">
+  <div class="row">
+    <div class="col-md-3 mb-5" *ngFor="let student of students">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ student.title }}</mat-card-title>
+          <mat-card-subtitle>{{ student.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="student.imgsrc" alt="Student Photo">
+        <mat-card-content></mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

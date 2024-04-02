@@ -1,0 +1,100 @@
+
+<div class="container custom-container">
+<mat-stepper #stepper>
+  <!-- First Step -->
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Per Information</ng-template>
+
+      <div class="form-group">
+        <label for="full_name">ID</label>
+        <input type="text" class="form-control" id="id" placeholder="" formControlName="id" name="id" [(ngModel)]="id" required>
+      </div>
+      <div class="form-group">
+        <label for="full_name">Full Name</label>
+        <input type="text" class="form-control" id="full_name" placeholder="" formControlName="full_name" name="full_name" [(ngModel)]="full_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile no:</label>
+        <input type="text" class="form-control" id="mobile" placeholder="" formControlName="mobile" name="mobile" [(ngModel)]="mobile" required>
+      </div>
+
+      <div class="form-group">
+        <label for="travel_code">Travel Code</label>
+        <input type="text" class="form-control" id="travel_code" placeholder="" formControlName="travel_code" name="travel_code" [(ngModel)]="travel_code" required>
+      </div>
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Second Step -->
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Tour Info</ng-template>
+
+      <div class="form-group">
+        <label for="tourist_spot">Tourist Spot</label>
+        <input type="text" class="form-control" id="tourist_spot" placeholder="" formControlName="tourist_spot" name="tourist_spot" [(ngModel)]="tourist_spot" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Event Date</label>
+        <input type="text" class="form-control" id="date" placeholder="" formControlName="date" name="date" [(ngModel)]="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="package_price">Package Price</label>
+        <input type="text" class="form-control small-input" id="package_price" placeholder="" formControlName="package_price" name="package_price" [(ngModel)]="package_price" required>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" class="form-control" id="quantity" placeholder="" formControlName="quantity" (change)="calculateTotal()" name="quantity" [(ngModel)]="quantity" required>
+      </div>
+
+      <div class="form-group">
+        <label for="total_tk">Total Tk</label>
+        <input type="text" class="form-control" id="total_tk" placeholder="" formControlName="total_tk" name="total_tk" [(ngModel)]="total_tk" required>
+      </div>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Third Step -->
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Done</ng-template>
+
+      <div class="form-group mb-1">
+        <label for="payment_option">Select Your Payment Method:</label>
+
+        <input type="radio" name="payment_option" required> <label for=""><img src="assets/image/bkash-logo-835789094A-seeklogo.com.png" style="width:100px ;"></label>
+        <input type="radio" name="payment_option" required> <label for=""><img src="assets/image/Nagad-Logo.wine.png" alt="" style="width:100px "></label>
+        <input type="radio" name="payment_option" required> <label for=""><img src="assets/image/card.png" alt="" style="width:100px ;"></label>
+      </div>
+
+      <div class="form-group">
+        <label for="account_number">Account Number</label>
+        <input type="text" class="form-control" id="account_number" placeholder="" formControlName="account_number" required>
+      </div>
+
+      <div class="mt-4">
+        <button  mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="warn" (click)="stepper.reset()" class="btn-margin">Reset</button>
+        <button mat-raised-button color="primary" class="btn-margin" (click)="addForm()">Submit</button>
+
+
+        <!-- <button mat-button>Print</button> -->
+      </div>
+    </form>
+  </mat-step>
+</mat-stepper>
+</div>

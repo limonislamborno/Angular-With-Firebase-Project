@@ -1,0 +1,35 @@
+
+
+
+    /* start features css */
+    #features{
+        /* background: #e8ded2; */
+        padding: 5% 10%;
+    }
+    .features-col{
+        border: 1px solid #000000;
+        border-radius: 5px;
+        /* transition: 0.5s; */
+        margin: 10px;
+    }
+
+
+
+
+
+    .card s{
+        transition: .0s;
+        border: 1px solid #000000;
+    }
+    .form-group label{
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+    #link{
+        list-style-type: none;
+    }
+    #link a{
+        text-decoration: none;
+        color: black;
+
+    }

@@ -1,0 +1,88 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating mb-3 tetx-center">
+                    <h1 class="text-center text-warning">Add Employee</h1>
+                </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="id" name="id" [(ngModel)]="id">
+                        <label for="firstname">Id</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="employee_name" name="employee_name" [(ngModel)]="employee_name">
+                        <label for="firstname">Name</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" id="male" name="gender" value="male" [(ngModel)]="gender">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" id="female" name="gender" value="female" [(ngModel)]="gender">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+
+
+
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="designation" name="designation" [(ngModel)]="designation">
+                            <option value="" disabled selected>Select Designation</option>
+                            <option value="Ceo">Ceo</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Moderator">Moderator</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <label for="designation">Designation</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="address" name="address" [(ngModel)]="address">
+                        <label for="email">Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="mobile">
+                        <label for="email">Mobile</label>
+                    </div>
+
+
+                    <button mat-raised-button color="primary" (click)="addForm()">Add</button>
+            </div>
+        </div>
+        <div class="col-md-8 mt-2">
+            <h1 class="text-danger"> Employee List</h1>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Designation Rate</th>
+                            <th scope="col">Address</th>
+
+                            <th scope="col">Mobile :</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let form of employeeList">
+                            <td >{{form.employee_name}}</td>
+                            <td>{{form.gender}}</td>
+                            <td>{{form.designation}}</td>
+                            <td>{{form.address}}</td>
+                            <td>{{form.mobile}}</td>
+
+                            <td>
+                                <button mat-raised-button color="warn" (click)="deleteForm(form)">Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

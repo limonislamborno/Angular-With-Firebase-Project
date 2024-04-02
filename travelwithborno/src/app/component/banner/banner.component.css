@@ -1,0 +1,17 @@
+/* start banner css */
+#banner {
+    height: 900px;
+    background: url('banner.jpg') center/cover no-repeat;
+  }
+.banner-container{
+    height: 100vh;
+}
+.banner-container h1{
+    font-size: 3rem;
+    padding: 1px;
+    background-color: rgb(78, 73, 77);
+    color: white;
+    font-weight: 800;
+    border-radius: 12px;   
+}
+/* end banner css */

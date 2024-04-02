@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* card css */
+.example-card{
+    transition: .4s;
+    border: 1px solid #ff02c0;
+  }
+  .example-card:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 6px 5px #000000;
+  }
+  
+  /* tabs css */
+
+/* Styles for Student Package tab */
+.mat-tab-label[aria-posinset="1"] {
+    background-color: #3498db; /* Blue */
+    color: #ffffff; /* White */
+  }
+  
+  /* Styles for Relax Package tab */
+  .mat-tab-label[aria-posinset="2"] {
+    background-color: #2ecc71; /* Green */
+    color: #ffffff; /* White */
+  }
+  
+  /* Styles for Foreign Package tab */
+  .mat-tab-label[aria-posinset="3"] {
+    background-color: #e74c3c; /* Red */
+    color: #ffffff; /* White */
+  }
+  
+
